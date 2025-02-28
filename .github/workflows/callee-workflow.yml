@@ -20,4 +20,4 @@ jobs:
     - name: Greet User
       run: |
         echo ${{ inputs.message }}
-        ls -laR
+        ls -lR .github
