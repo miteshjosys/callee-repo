@@ -1,0 +1,20 @@
+name: Callee Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'A message to greet the user'
+        required: true
+        default: 'Hello, World!'
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Greet User
+      run: echo ${{ github.event.inputs.message }}
