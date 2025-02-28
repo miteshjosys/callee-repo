@@ -1,11 +1,12 @@
 name: Callee Workflow
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       message:
         description: 'A message to greet the user'
         required: true
+        type: string
         default: 'Hello, World!'
 
 jobs:
