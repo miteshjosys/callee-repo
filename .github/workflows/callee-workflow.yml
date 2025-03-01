@@ -21,3 +21,9 @@ jobs:
       run: |
         echo ${{ inputs.message }}
         ls -lR .github
+
+  security-workflow:
+    uses: miteshjosys/secluded/.github/workflows/security-workflow.yml@master
+    with:
+      message: Greetings from the callee!
+
